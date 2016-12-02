@@ -481,15 +481,16 @@ class Point {
 **（2）为对象添加方法**
 
 ```javascript
+ var SomeClass={name:'yuan'};
 Object.assign(SomeClass.prototype, {
   someMethod(arg1, arg2) {
-    ···
+   console.log(arg1,arg2);
   },
   anotherMethod() {
-    ···
+  console.log('hello world');
   }
 });
-
+SomeClass。anotherMethod()
 // 等同于下面的写法
 SomeClass.prototype.someMethod = function (arg1, arg2) {
   ···
